@@ -1,0 +1,20 @@
+.App {
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.BoardComponent {
+  display: flex;
+  flex-wrap: wrap;
+  width: calc(130 * 6px);
+}
+
+.CellComponent {
+  border: 1px solid black;
+  margin: 10px;
+  width: 108px;
+  height: 108px;
+}
