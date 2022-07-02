@@ -1,24 +1,24 @@
 import React, { FC, useEffect, useState } from "react";
-import BoardComponent from "./Components/Models/Board/BoardComponent";
+import BoardClass from "./Components/Models/Board/BoardClass";
 import PlaygroundPage from "./Components/Pages/PlaygroundPage/PlaygroundPage";
 
 import './Styles/index.css';
 
 const App: FC = () => {
-  const [board, setBoard] = useState(new BoardComponent())
+  const [board, setBoard] = useState(new BoardClass())
 
   useEffect(() => {
     initBoard();
   }, [])
 
   const initBoard = () => {
-    const board = new BoardComponent();
-    board.initCells();
+    const board = new BoardClass();
+    board.initCells(2);
     setBoard(board)
   }
   return (
     <div className="App">
-      <PlaygroundPage board={board}/>
+      <PlaygroundPage board={board} setBoard={setBoard}/>
     </div>
   )
 }
