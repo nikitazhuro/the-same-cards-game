@@ -15,7 +15,6 @@ class Cell {
   showCard () {
     this.active = true
     this.isHidden = false
-    return this.cardImg;
   }
 
   closeCard () {

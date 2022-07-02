@@ -10,6 +10,7 @@ module.exports = {
   output: {
     filename: '[name].build.js',
     path: path.resolve(__dirname, 'dist'),
+    publicPath: '/',
   },
   module: {
     rules: [
@@ -41,6 +42,7 @@ module.exports = {
   },
   devServer: {
     port: 4000,
+    historyApiFallback: true
   },
   plugins: [
     new HtmlWebpackPlugin({

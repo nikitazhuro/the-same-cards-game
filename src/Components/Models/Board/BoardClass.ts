@@ -31,9 +31,9 @@ class BoardClass {
     return board;
   }
 
-  public closeActiveCards (imgId1: string, imgId2: string) {
+  public closeActiveCards (images: Cell[]) {
     const newCells: Cell[] = this.cells.map((e: Cell): Cell => {
-      if (e.cardImg === imgId1 || e.cardImg === imgId2) {
+      if ([...images.map(el => el.cardImg)].includes(e.cardImg)) {
         e.closeCard();
       }
       return e;

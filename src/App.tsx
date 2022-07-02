@@ -1,24 +1,12 @@
-import React, { FC, useEffect, useState } from "react";
-import BoardClass from "./Components/Models/Board/BoardClass";
-import PlaygroundPage from "./Components/Pages/PlaygroundPage/PlaygroundPage";
+import React, { FC } from "react";
+import AppRouter from "./Router/AppRouter";
 
 import './Styles/index.css';
 
 const App: FC = () => {
-  const [board, setBoard] = useState(new BoardClass())
-
-  useEffect(() => {
-    initBoard();
-  }, [])
-
-  const initBoard = () => {
-    const board = new BoardClass();
-    board.initCells(2);
-    setBoard(board)
-  }
   return (
     <div className="App">
-      <PlaygroundPage board={board} setBoard={setBoard}/>
+      <AppRouter />
     </div>
   )
 }

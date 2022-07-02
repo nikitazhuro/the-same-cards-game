@@ -11,8 +11,10 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
+    "@types/react-router-dom": "^5.3.3",
     "react": "^18.2.0",
-    "react-dom": "^18.2.0"
+    "react-dom": "^18.2.0",
+    "react-router-dom": "^6.3.0"
   },
   "devDependencies": {
     "@babel/core": "^7.18.5",
