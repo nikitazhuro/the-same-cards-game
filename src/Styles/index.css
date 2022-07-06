@@ -1,12 +1,86 @@
-.App {
-  width: 100vw;
-  height: 100vh;
-  display: flex;
-  justify-content: center;
-  align-items: center;
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Open Sans, Sans-serif;
 }
 
-.BoardComponent {
+button {
+  padding: 15px 26px;
+  -webkit-box-shadow: rgba(0, 0, 0, 0.701961) 0px 5px 12px;
+   -webkit-transform-origin: 50% 1px;
+   -webkit-transition: all 0.15s ease-in-out;
+  background:  #161616;
+  border-color: rgba(255, 255, 255, 0.027451) #FF8C39 rgba(255, 255, 255, 0.027451) rgba(255, 255, 255, 0.027451);
+   border-style: solid;
+  border-width: 1px 4px 1px 1px;
+  box-shadow: rgba(0, 0, 0, 0.701961) 0px 5px 12px;
+  color: #555;
+  color: rgba(245, 245, 245, 0.48);
+  display:block;
+  width: 250px;
+  border-radius: 5px;
+   font-size: 18px;
+  letter-spacing: 4px;
+  text-shadow: rgb(0, 0, 0) 0px 1px 1px;
+  line-height: 30px;
+  position: relative;
+  margin: 20px auto;
+  text-align: center;
+  text-decoration:none;
+}
+button:hover {
+  cursor: pointer;
+  opacity: 0.9;
+  border-width: 1px 7px 1px 1px;
+}
+button:active {
+-webkit-box-shadow:inset rgba(0, 0, 0, 0.701961) 0px 7px 12px,rgba(0, 0, 0, 0.701961) 0px 2px 12px  ;
+text-shadow: rgb(0, 0, 0) 0px -2px 1px;
+margin-top: 1px;
+}
+
+video {
+  z-index: 1;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+}
+
+.App {
+  background-color: whitesmoke;
+  width: 100vw;
+  height: 100vh;
+}
+
+.MenuPage {
+  position: relative;
+  width: 100%;
+  height: 100%;
+}
+
+.Background {
+  width: 100%;
+  height: 100%;
+}
+
+.MenuForm {
+  z-index: 10;
+  position: absolute;
+  width: 40%;
+  height: 100%;
+  padding: 30px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.BroadComponents {
+  width: 100%;
+  height: 100%;
+}
+
+.Playground {
   display: flex;
   flex-wrap: wrap;
   width: calc(130 * 6px);

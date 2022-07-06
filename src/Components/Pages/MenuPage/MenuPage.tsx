@@ -1,9 +1,19 @@
-import React from "react";
+import React, { FC } from "react";
 
-const MenuPage = () => {
+import video from '../../../Assets/videoGif.gif'
+
+import MenuForm from "./Components/MenuForm";
+
+const MenuPage: FC = () => {
   return (
-    <div>
-      MenuPage
+    <div className="MenuPage">
+      <MenuForm />
+      <div>
+      <img
+        className="Background"
+        src={video}
+      />
+    </div>
     </div>
   )
 }

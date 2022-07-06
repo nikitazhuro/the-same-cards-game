@@ -3,14 +3,11 @@ import React, { FC, useEffect, useState } from "react";
 import BoardClass from "../../Models/Board/BoardClass";
 import Cell from "../../Models/Cell/Cell";
 import CellComponent from "../../Models/Cell/CellComponent";
+import StatisticsForm from "./Components/StatisticsForm";
 
 const PlaygroundPage: FC = () => {
 
   const [board, setBoard] = useState(new BoardClass())
-
-  useEffect(() => {
-    initBoard();
-  }, [])
 
   const initBoard = () => {
     const board = new BoardClass();
@@ -41,14 +38,23 @@ const PlaygroundPage: FC = () => {
       }
     }
   }
-  
+
+  useEffect(() => {
+    initBoard();
+  }, [])
+
   return (
     <div className="BoardComponent">
+      <div className="Statistics">
+        <StatisticsForm />
+      </div>
+      <div className="Playground">
       {board.cells.map((cell, index) => (
         <React.Fragment key={index}>
           <CellComponent cell={cell} cardClickHandler={cardClickHandler}/>
         </React.Fragment>
       ))}
+      </div>
     </div>
   )
 }
